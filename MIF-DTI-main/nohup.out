@@ -1,0 +1,29 @@
+Using device: cuda:0
+GPU Name: Tesla V100-SXM2-32GB
+Memory Allocated: 0.00 MB
+Train in Davis
+load data
+load finished
+data shuffle
+Number of Train&Val set: 20618
+Number of Test set: 5153
+Loading Protein Graph data...
+Loading Ligand Graph data...
+************************* No. 1 -fold *************************
+Fold 1: Train size: 16495, Valid size: 4123
+Training...
+Epoch 1: Updating feature weights (delta) using sensitivity analysis...
+  Delta updated (Momentum=0.9): Mean=1.0026, Min=0.9522, Max=1.1045
+  DFGU Weights (Layer 0): la_1D=0.6225, la_2D=0.6225
+/data/miniconda/envs/torch/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 due to no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+[  1/200] train_loss: 26.75901 valid_loss: 62.67641 valid_AUC: 0.48541 valid_PRC: 0.27845 valid_Accuracy: 0.71167 valid_Precision: 0.00000 valid_Reacll: 0.00000 
+Have a new best checkpoint: (-inf --> 0.711670).  Saving model ...
+  New best AUC: 0.48541, Delta saved to results/training_logs/Davis_fold1_best_delta.csv
+Epoch 2: Updating feature weights (delta) using sensitivity analysis...
+  Delta updated (Momentum=0.9): Mean=0.9984, Min=0.9549, Max=1.0720
+  DFGU Weights (Layer 0): la_1D=0.6192, la_2D=0.6050
+[  2/200] train_loss: 14.85533 valid_loss: 1.38890 valid_AUC: 0.65866 valid_PRC: 0.42148 valid_Accuracy: 0.49756 valid_Precision: 0.34780 valid_Reacll: 0.84843 
+EarlyStopping counter: 1 out of 50
+  New best AUC: 0.65866, Delta saved to results/training_logs/Davis_fold1_best_delta.csv
+Epoch 3: Updating feature weights (delta) using sensitivity analysis...
